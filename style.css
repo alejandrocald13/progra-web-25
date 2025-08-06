@@ -50,6 +50,16 @@ ul{
 il{
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+}
+
+il:hover{
+    label{
+        color: rgb(222, 222, 222);
+    }
+    .img-profiles{
+        border: 3px solid white;
+    }
 }
 
 label{
@@ -75,4 +85,9 @@ button{
     height: 15%;
     width: 9rem;
     cursor: pointer;
+}
+
+button:hover{
+    border: 1px solid white;
+    color: white;
 }
