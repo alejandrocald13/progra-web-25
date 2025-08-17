@@ -11,8 +11,9 @@ function App() {
 
 
     <div className='main-container'>
-      {Array.from({ length: 1 }).map((_, index) => (
-        <PokemonCard key={index} id={index + 252} />
+      {Array.from({ length: 135 }).map((_, index) => (
+        <PokemonCard key={index} id={index+252} />
+        // <PokemonCard key={index} id={25} />
       ))}
     </div>
     </>
