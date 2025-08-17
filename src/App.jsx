@@ -1,16 +1,18 @@
-import { useState } from 'react'
 import './App.css'
 import PokemonCard from './components/PokemonCard'
 
 function App() {
 
-  const pokemons = ['Pikachu', 'Charmander', 'Bulbasaur', 'Squirtle', 'Eevee'];
-  
   return (
     <>
+    <header className='header'>
+      <h1>Pokedéx</h1>
+    </header>
+
+
     <div className='main-container'>
-      {pokemons.map((name, i) => (
-        <PokemonCard key={i} name={name} />
+      {Array.from({ length: 1 }).map((_, index) => (
+        <PokemonCard key={index} id={index + 252} />
       ))}
     </div>
     </>
