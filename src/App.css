@@ -1,8 +1,22 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
   text-align: center;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  background-color: #FF6F61;
+  margin: 0 0 1rem 0;
+}
+
+.header-title {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
 }
 
 .main-container{
