@@ -11,6 +11,7 @@ function App() {
     Task.create(3, 'Tarea 3', '2030'),
   ])
 
+  const [filterOption, setFilterOption] = useState('all')
 
   const addTask = ({ name, dueDate }) => {
     const newTask = Task.create(Date.now(), name, dueDate)
@@ -26,7 +27,12 @@ function App() {
     setTasks(prev => [...prev]) // cloning task to force reload
   }
 
-
+  const filteredTasks = tasks.filter(t => {
+      if (filterOption === 'all') return true
+      if (filterOption === 'pending') return !t.state
+      if (filterOption === 'completed') return t.state
+      return true
+    })
 
   return (
     <>
