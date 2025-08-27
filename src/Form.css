@@ -1,0 +1,44 @@
+.task-form {
+    display: flex;
+    gap: 14px;
+    align-items: end;
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    }
+
+.field {
+    display: grid;
+    gap: 6px;
+}
+
+.field label {
+    font-weight: 700;
+    color: #333333;                
+    font-size: 14px;
+}
+
+.field-input{
+    background: #ffffff;
+    border: 1px solid #c3c3c3;
+    padding: 8px 10px;
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+.btn {
+    border: 1px solid #777777;        
+    background: #e6e6e6;            
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #f3f3f3;
+}
+
+.btn.add {
+    padding: 8px 14px;
+}
