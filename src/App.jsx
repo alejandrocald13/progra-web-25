@@ -5,11 +5,12 @@ import Form from './Form'
 import Task from './Task'
 
 function App() {
-  const [tasks, setTasks] = useState([
-    Task.create(1, 'Tarea 1', '2025'),
-    Task.create(2, 'Tarea 2', '1985'),
-    Task.create(3, 'Tarea 3', '2030'),
-  ])
+  const [tasks, setTasks] = useState(() => {
+    const raw = localStorage.getItem('tasks')
+    if (!raw) return []
+    const parsed = JSON.parse(raw)
+    return parsed.map(t => Task.create(t.id, t.name, t.dueDate, t.state))
+  })
 
   const [filterOption, setFilterOption] = useState('all')
 
@@ -32,7 +33,13 @@ function App() {
       if (filterOption === 'pending') return !t.state
       if (filterOption === 'completed') return t.state
       return true
-    })
+  })
+
+  useEffect(() =>{
+
+    localStorage.setItem('tasks', JSON.stringify(tasks.map(t => t.jsonTask())))
+
+  }, [tasks])
 
   return (
     <>
