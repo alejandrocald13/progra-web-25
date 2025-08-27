@@ -1,11 +1,12 @@
 .task-form {
     display: flex;
     gap: 14px;
-    align-items: end;
+    margin-left: 5rem;
+    align-items: center;
     padding: 14px 16px;
     border-radius: 6px;
     margin-bottom: 18px;
-    }
+}
 
 .field {
     display: grid;
@@ -27,18 +28,16 @@
 }
 
 .btn {
-    border: 1px solid #777777;        
-    background: #e6e6e6;            
-    padding: 8px 14px;
+    all: unset;
+}
+
+.btn-add{
+    margin-top: 1.4rem;
+    height: 1.2rem;
+    color: gray;
     cursor: pointer;
-    border-radius: 2px;
-    font-weight: 600;
 }
 
-.btn:hover {
-    background: #f3f3f3;
-}
-
-.btn.add {
-    padding: 8px 14px;
+.btn-add:hover{
+    color: rgba(128, 128, 128, 0.322);
 }

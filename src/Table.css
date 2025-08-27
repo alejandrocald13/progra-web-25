@@ -1,5 +1,5 @@
 .table-tasks {
-    width: 50%;
+    width: 100%;
     font-size: 14px;
 }
 
@@ -15,4 +15,17 @@
 
     .table-tasks tr:hover {
     background-color: #f0f8ff;
+}
+
+.btn-complete, .btn-delete{
+    height: 1.4rem;
+    cursor: pointer;
+}
+
+.btn-complete:hover{
+    color: green;
+}
+
+.btn-delete:hover{
+    color: red;
 }
