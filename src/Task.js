@@ -4,14 +4,15 @@ export default class Task{
     dueDate = ''
     state = false
 
-    constructor(id, name, dueDate){
+    constructor(id, name, dueDate, state = false){
         this.id = id
         this.name = name
         this.dueDate = dueDate
+        this.state = state
     }
 
-    static create(id, name, dueDate){
-        const newTask = new Task(id, name, dueDate)
+    static create(id, name, dueDate, state = false){
+        const newTask = new Task(id, name, dueDate, state)
         return newTask
     }
 
