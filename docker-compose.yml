@@ -31,3 +31,8 @@ services:
     container_name: redis_insight
     ports:
       - "5540:5540"
+    volumes:
+    - redis_insight_data:/data
+    
+volumes:
+  redis_insight_data:
