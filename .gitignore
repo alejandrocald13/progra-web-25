@@ -1,3 +1,17 @@
-.venv
+# Ignorar caché de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
 
+# Ignorar entorno virtual
+.venv/
+.env/
+
+# Ignorar archivos temporales de Docker
+*.pid
+*.sock
+
+# Ignorar archivos bd
 db.sqlite3
