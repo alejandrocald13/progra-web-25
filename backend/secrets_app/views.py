@@ -28,3 +28,4 @@ def reveal_secret(request, key):
 
     redisClient.delete(key)
     return Response({'message': message})
+
