@@ -6,14 +6,19 @@ services:
       - "8000:8000"
     depends_on:
       - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
 
   frontend:
     build: ./frontend
     container_name: react_frontend
     ports:
-      - "3000:3000"
+      - "5173:5173"
     depends_on:
       - backend
+    environment:
+      - VITE_BACKEND_URL=http://localhost:8000
 
   redis:
     image: redis:7
